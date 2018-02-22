@@ -936,7 +936,7 @@ public class TestItemStackOperators {
         TestHelpers.assertEqual(((ValueTypeInteger.ValueInteger) res2).getRawValue(), 0, "storedfe(energyBatteryEmpty) == 0");
 
         IValue res3 = Operators.OBJECT_ITEMSTACK_STOREDFE.evaluate(new IVariable[]{iEnergyBatteryFull});
-        TestHelpers.assertEqual(((ValueTypeInteger.ValueInteger) res3).getRawValue(), 100000, "storedfe(energyBatteryFull) == 100000");
+        TestHelpers.assertEqual(((ValueTypeInteger.ValueInteger) res3).getRawValue(), 2000, "storedfe(energyBatteryFull) == 2000");
     }
 
     @IntegrationTest(expected = EvaluationException.class)
@@ -965,10 +965,10 @@ public class TestItemStackOperators {
         TestHelpers.assertEqual(((ValueTypeInteger.ValueInteger) res1).getRawValue(), 0, "fecapacity(apple) == false");
 
         IValue res2 = Operators.OBJECT_ITEMSTACK_FECAPACITY.evaluate(new IVariable[]{iEnergyBatteryEmpty});
-        TestHelpers.assertEqual(((ValueTypeInteger.ValueInteger) res2).getRawValue(), 100000, "fecapacity(energyBatteryEmpty) == 100000");
+        TestHelpers.assertEqual(((ValueTypeInteger.ValueInteger) res2).getRawValue(), 1000000, "fecapacity(energyBatteryEmpty) == 100000");
 
         IValue res3 = Operators.OBJECT_ITEMSTACK_FECAPACITY.evaluate(new IVariable[]{iEnergyBatteryFull});
-        TestHelpers.assertEqual(((ValueTypeInteger.ValueInteger) res3).getRawValue(), 100000, "fecapacity(energyBatteryFull) == 100000");
+        TestHelpers.assertEqual(((ValueTypeInteger.ValueInteger) res3).getRawValue(), 1000000, "fecapacity(energyBatteryFull) == 100000");
     }
 
     @IntegrationTest(expected = EvaluationException.class)
